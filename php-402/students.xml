@@ -1,0 +1,20 @@
+<students>
+    <student>
+        <id>1</id>
+        <name>Rollie Llorca</name>
+        <gender>Male</gender>
+        <section>one</section>
+    </student>
+    <student>
+        <id>2</id>
+        <name>James Reid</name>
+        <gender>Male</gender>
+        <section>two</section>
+    </student>
+    <student>
+        <id>3</id>
+        <name>Leon Toño</name>
+        <gender>Male</gender>
+        <section>two</section>
+    </student>
+</students>
