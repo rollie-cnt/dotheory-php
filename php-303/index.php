@@ -33,7 +33,7 @@ class Country
         $start = new DateTime($this->start_year_colonization);
         $end = new DateTime($this->end_year_colonization);
         $interval = $start->diff($end);
-        
+
         return "
             Name: $this->name<br>
             Description: $this->description<br>
