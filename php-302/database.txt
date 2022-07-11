@@ -1,0 +1,10 @@
+CREATE DATABSE php_training;
+USE DATABSE php_training;
+CREATE TABLE `ph_heroes` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `first_name` varchar(250) DEFAULT NULL,
+  `last_name` varchar(250) DEFAULT NULL,
+  `birth_place` varchar(250) DEFAULT NULL,
+  `description` text,
+  PRIMARY KEY (`id`)
+);
