@@ -24,7 +24,7 @@ $restos = [
     'jollibee' => [
         'branches' => 12,
         'managers' => 15,
-        'employees' => 50,
+        'employees' => 80,
     ],
     'mcdonalds' => [
         'branches' => 18,
@@ -40,6 +40,7 @@ $restos = [
 
 $max_employee_name = '';
 $min_manager_name = '';
+$min_max_name = 'N/A';
 
 $max_employee = 0;
 $min_manager = max(array_column($restos, 'managers')); // get the max value of manager.
@@ -69,6 +70,11 @@ foreach ($restos as $name => $resto) {
             $min_manager_name = $name;
         }
 
+        // get the least manager and most employee
+        if ($resto['employees'] > $temp['employees'] && $resto['managers'] < $temp['managers']) {
+            $min_max_name = $name;
+        }
+
         $checker--;
         if ($checker < 0) {
             break;
@@ -77,4 +83,6 @@ foreach ($restos as $name => $resto) {
 }
 
 echo "the resto with the least manager is <strong>" . $min_manager_name . "</strong>. <BR>";
-echo "the resto with the most employee is <strong>" . $max_employee_name . "</strong>. <BR>";
+echo "the resto with the most employee is <strong>" . $max_employee_name . "</strong>. <BR><BR>";
+
+echo "the resto with the most employee and least manager <strong>" . $min_max_name . "</strong>. <BR>";
